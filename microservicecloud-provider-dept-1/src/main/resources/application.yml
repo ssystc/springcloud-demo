@@ -1,0 +1,27 @@
+server:
+   port: 8002
+
+mybatis:
+   config-location: classpath:mybatis/mybatis.cfg.xml
+   type-aliases-package: com.sunsy.springcloud.entity
+   mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+spring:
+   application:
+      name: microservicecloud-dept
+   datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/cloudDb02
+      username: root
+      password: 413531
+          
+eureka:
+   client:
+      service-url:
+         #defaultZone: http://192.168.44.63:6006/eureka
+         defaultZone: http://eureka1:6006/eureka,http://eureka2:6007/eureka,http://eureka3:6008/eureka
+   instance:
+      instance-id: dept-provider-8002    #自己命名instance-id，替代默认值
+      prefer-ip-address: true            #把鼠标放在status上时会在浏览器的左下角显示真实的IP和端口号
+      

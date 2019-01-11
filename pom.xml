@@ -89,5 +89,7 @@
   	<module>microservice-eureka-server-6007</module>
   	<module>microservicecloud-eureka-server-6007</module>
   	<module>microservicecloud-eureka-server-6008</module>
+  	<module>microservicecloud-provider-dept-1</module>
+  	<module>microservicecloud-consumer-dept-feign</module>
   </modules>
 </project>
